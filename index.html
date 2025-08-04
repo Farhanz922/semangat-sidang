@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Wisuda Rara 🎓</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: #fef6fb;
+      overflow-x: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #e87ea1;
+    }
+    .message {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2em;
+      line-height: 1.7em;
+      color: #444;
+    }
+    .signature {
+      margin-top: 30px;
+      font-style: italic;
+      color: #888;
+    }
+    .gallery {
+      margin-top: 50px;
+    }
+    .gallery img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .footer {
+      margin-top: 60px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://audio.jukehost.co.uk/DXobFJJM31lGWzTGWsIq4XoZaTqPehsf" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <canvas class="confetti"></canvas>
+
+  <div class="container">
+    <h1>Selamat Wisuda, Rara 🥳</h1>
+    <div class="message">
+      <p>Selamat sudah selesai sidang, perempuan manis nan cantik, Azzahra Ramadhani Widyanti, S.Tr.Stat (Unofficial).</p>
+
+      <p>Tidak terasa kan, kamu sudah melewati 4 tahun masa kuliah kamu, dengan posisi kamu merantau dari Jawa Timur. Naik dan turun, serta segala hal yang terjadi selama di perkuliahan dan perantauan, sudah membentuk diri kamu sampai menjadi seseorang yang keren dan kuat seperti sekarang.</p>
+
+      <p>Selamat merayakan, selamat menikmati salah satu momen bahagia dalam hidup kamu. Semoga ilmu yang kamu peroleh selama 4 tahun ke belakang dapat bermanfaat bagi diri kamu, orang tua, serta masyarakat, yaa.</p>
+
+      <p>Semoga langkah ke depannya makin mantap dan selalu dikelilingi hal-hal baik. Aku bangga banget sama kamu raa! Oh iya, ayo kita main di Sabtu nanti yaaaa---soalnya, ada sedikit kejutan yang aku siapin khusus buat kamu 😊</p>
+
+      <p>Semoga aku dan kamu segera menjadi KITA ya hihihihi. Semangat rara cantik nan manis</p>
+    </div>
+
+    <div class="signature">
+      Someone that loves you the most,<br />Farhan
+    </div>
+
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Foto bersama Rara di akuarium">
+      <img src="foto2.jpg" alt="Foto Rara di antara idolanya">
+    </div>
+
+    <div class="footer">
+      💖 Website ini dibuat khusus untukmu, Rara. Jangan dikasih tahu siapa-siapa ya 😚
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const confettiCanvas = document.querySelector('.confetti');
+    const myConfetti = confetti.create(confettiCanvas, {
+      resize: true,
+      useWorker: true
+    });
+    setInterval(() => {
+      myConfetti({
+        particleCount: 3,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }, 300);
+  </script>
+</body>
+</html>
